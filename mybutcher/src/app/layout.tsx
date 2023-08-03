@@ -1,13 +1,6 @@
-"use client";
-
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-
-import GlobalStyle from "../styles/global";
-import { ThemeProvider } from "styled-components";
-import light from "@/styles/themes/light";
-
-// import { useState } from "react";
+import './globals.css'
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,17 +14,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  
-  // const [theme, setTheme] = useState(light);
-
   return (
-    <ThemeProvider theme={light}>
-      <html lang="pt-br">
-        <body className={inter.className}>
-          <GlobalStyle />
-          {children}
-        </body>
-      </html>
-    </ThemeProvider>
-  );
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
+    </html>
+  )
 }
