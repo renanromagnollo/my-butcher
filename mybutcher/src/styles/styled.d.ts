@@ -22,6 +22,8 @@ declare module 'styled-components' {
 
             darkDefault: string,
             darkLight: string,
+
+            backgroundColor: string,
         },
 
         shadow: {

@@ -19,6 +19,8 @@ export default {
 
         darkDefault: '#1a1a1a',
         darkLight: '#5a5a5a',
+
+        backgroundColor: '#f2f2f2',
     },
 
     shadow: {
