@@ -14,10 +14,22 @@ export default createGlobalStyle`
 
     html,
     body {
-        max-width: 100vw;
+        width: 100vw;
+        /* max-width: 100vw; */
+        height: 100vh;
         overflow-x: hidden;
         font-size: 14px;
         color: ${props => props.theme.colors.darkDefault};
         background-color: ${props => props.theme.colors.lightDefault};
+
+        display: grid;
+        grid-template-columns: 5fr 1fr;
+        grid-template-rows: 70px 40px 1fr 50px;
+        grid-template-areas: 
+            "header cart"
+            "filters cart"
+            "main cart"
+            "footer footer"
+            ;
     }
 `;

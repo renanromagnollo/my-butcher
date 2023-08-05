@@ -9,6 +9,10 @@ import { DefaultPageLayout } from "@/styles/default-page-layout";
 import StyledComponentsRegistry from "@/styles/registry";
 import { ThemeProvider } from "styled-components";
 import light from '@/styles/themes/light';
+import { Header } from "@/components/header";
+import { CartSession } from "@/components/cart-session";
+import { Filters } from "@/components/filters";
+import { Footer } from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,7 +32,11 @@ export default function RootLayout({
         <ThemeProvider theme={light}>
           <GlobalStyles />
           <body className={inter.className}>
+              <Header/>
+              <Filters/>
               {children}
+              <CartSession/>
+              <Footer/>
           </body>
         </ThemeProvider>
       </StyledComponentsRegistry>
