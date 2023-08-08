@@ -1,6 +1,8 @@
 import { BioRhyme } from "next/font/google"
 import Image from "next/image"
 import { styled } from "styled-components"
+import { useState, useCallback } from 'react';
+import { formatReal } from "@/utils/format-price";
 
 interface ItemProps {
     title: string
@@ -82,21 +84,53 @@ const ItemButton = styled.button`
     cursor: pointer;
 `
 
+const CounterItem = styled.div`
+    display: flex;
+    justify-content: space-between;
+    /* gap: 10px; */
+    align-items: center;
+
+    button {
+        margin: 0 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        user-select: none;
+    }
+`
+
+
 export function Item(props : ItemProps){
+
+    const [counter, setCounter] = useState(1)
+    
+    const itemValue = 35
+
     return(
         <ItemContainer>
             <ItemContent>
                 <ImageArea>
                     <ImageInfos>
-                        <div>R$35,00/kg</div>
-                        <h2>Title</h2>
+                        <div>{`${formatReal(itemValue)}/kg`}</div>
+                        <h2>Picanha</h2>
                         <Image src={'/flag-boi.png'} width={45} height={33} alt="Icon boi"/>
                     </ImageInfos>
                     <Image src={'https://baconmockup.com/235/198/'} width={235} height={198} alt="Picture of item" style={{objectFit: 'cover'}}/>
                 </ImageArea>
                 <div>
-                    <div>Counter</div>
-                    <div>Total</div>
+                    <CounterItem>
+                        <button style={{backgroundColor: 'red'}} onClick={() => counter > 0.5 ? setCounter(counter => counter - 0.5) : ''}>-</button>
+                        <div>{`${counter}kg`}</div>
+                        <button style={{backgroundColor: 'green'}} onClick={() => setCounter(counter => counter + 0.5)}>+</button>
+                        <span>=</span>
+                    </CounterItem>
+                    <div>{formatReal(counter * itemValue)}</div>
                 </div>
                 <div>
                     <ItemButton>Pedir</ItemButton>
