@@ -32,6 +32,7 @@ const Logo = styled.a`
     font-size: 25px;
     line-height: 150%;
     text-decoration: none;
+    user-select: none;
 
     span {
         color: ${props => props.theme.colors.primaryDark}

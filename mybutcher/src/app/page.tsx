@@ -1,5 +1,6 @@
 "use client"
 
+import { Filters } from "@/components/filters"
 import { DefaultPageLayout } from "@/styles/default-page-layout"
 import { styled } from "styled-components"
 
@@ -17,7 +18,7 @@ export default function Home() {
   return (
     // <DefaultPageLayout>
       <TagMain>
-        Hello Home!
+        <Filters/>
       </TagMain>
 
     // </DefaultPageLayout>
