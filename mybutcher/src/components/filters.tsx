@@ -23,7 +23,7 @@ const TagFilters = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: darkviolet;
+  /* background-color: darkviolet; */
   ul {
     list-style: none;
     display: flex;
@@ -60,9 +60,10 @@ export function Filters() {
   return (
     <TagFilters>
       <ul>
-        {categories.map(category => {
+        {categories.map((category: string, i: number) => {
           return (
             <FilterButton 
+              key={i}
               selected={type === FilterType[category.toUpperCase()]}
               onClick={() => handleChangeType(FilterType[category.toUpperCase()])}
             >

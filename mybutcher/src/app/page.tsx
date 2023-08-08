@@ -1,6 +1,7 @@
 "use client"
 
 import { Filters } from "@/components/filters"
+import { Item } from "@/components/item"
 import { DefaultPageLayout } from "@/styles/default-page-layout"
 import { styled } from "styled-components"
 
@@ -11,14 +12,14 @@ const TagMain = styled.main`
   /* display: flex; */
   width: 100%;
   height: 100%;
-  background-color: violet;
+  /* background-color: violet; */
 `
 
 export default function Home() {
   return (
     // <DefaultPageLayout>
       <TagMain>
-        {/* <Filters/> */}
+        <Item/>
       </TagMain>
 
     // </DefaultPageLayout>
