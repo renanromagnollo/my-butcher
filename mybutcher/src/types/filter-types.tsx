@@ -1,5 +1,5 @@
 export enum FilterType {
-    'ALL',
+    'TODOS',
     'PORCO',
     'BOI',
     'FRANGO'

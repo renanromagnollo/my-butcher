@@ -23,7 +23,7 @@ const TagFilters = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: darkviolet; */
+  background-color: darkviolet;
   ul {
     list-style: none;
     display: flex;
@@ -60,30 +60,17 @@ export function Filters() {
   return (
     <TagFilters>
       <ul>
-        <FilterButton 
-          selected={type === FilterType.ALL}
-          onClick={() => handleChangeType(FilterType.ALL)}
-        >
-          Todos
-        </FilterButton>
-        <FilterButton 
-          selected={type === FilterType.BOI}
-          onClick={() => handleChangeType(FilterType.BOI)}
-        >
-          Boi
-        </FilterButton>
-        <FilterButton 
-          selected={type === FilterType.PORCO}
-          onClick={() => handleChangeType(FilterType.PORCO)}
-        >
-          Porco
-        </FilterButton>
-        <FilterButton 
-          selected={type === FilterType.FRANGO}
-          onClick={() => handleChangeType(FilterType.FRANGO)}
-        >
-          Frango
-        </FilterButton>
+        {categories.map(category => {
+          return (
+            <FilterButton 
+              selected={type === FilterType[category.toUpperCase()]}
+              onClick={() => handleChangeType(FilterType[category.toUpperCase()])}
+            >
+              {category}
+            </FilterButton>
+          )
+        })}
+        
       </ul>
     </TagFilters>
   );

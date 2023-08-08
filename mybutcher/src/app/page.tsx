@@ -18,7 +18,7 @@ export default function Home() {
   return (
     // <DefaultPageLayout>
       <TagMain>
-        <Filters/>
+        {/* <Filters/> */}
       </TagMain>
 
     // </DefaultPageLayout>

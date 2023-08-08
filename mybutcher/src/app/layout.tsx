@@ -33,7 +33,7 @@ export default function RootLayout({
           <GlobalStyles />
           <body className={inter.className}>
               <Header/>
-              {/* <Filters/> */}
+              <Filters/>
               {children}
               <CartSession/>
               <Footer/>
