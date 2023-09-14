@@ -121,7 +121,7 @@ export function Item(props : ItemProps){
                         <h2>Picanha</h2>
                         <Image src={'/flag-boi.png'} width={45} height={33} alt="Icon boi"/>
                     </ImageInfos>
-                    <Image src={'https://baconmockup.com/235/198/'} width={235} height={198} alt="Picture of item" style={{objectFit: 'cover'}}/>
+                    <Image src={'https://baconmockup.com/235/198/'} width={235} height={198} alt="Image item" style={{objectFit: 'cover'}}/>
                 </ImageArea>
                 <div>
                     <CounterItem>

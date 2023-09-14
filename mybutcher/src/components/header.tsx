@@ -48,7 +48,7 @@ export function Header(props : HeaderProps){
 
     return(
         <TagHeader>
-            <Logo className={lato.className}>my<span>Butcher</span></Logo>
+            <Logo className={lato.className}>e-<span>butcher</span></Logo>
             <div>
                 <InputSearch
                     placeholder="Digite o que deseja procurar..."
