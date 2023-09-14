@@ -29,16 +29,18 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <StyledComponentsRegistry>
-        <ThemeProvider theme={light}>
-          <GlobalStyles />
-          <body className={inter.className}>
-              <Header/>
-              <Filters/>
-              {children}
-              <CartSession/>
-              <Footer/>
-          </body>
-        </ThemeProvider>
+        <DefaultProviders>
+          <ThemeProvider theme={light}>
+            <GlobalStyles />
+            <body className={inter.className}>
+                <Header/>
+                <Filters/>
+                {children}
+                <CartSession/>
+                <Footer/>
+            </body>
+          </ThemeProvider>
+        </DefaultProviders>
       </StyledComponentsRegistry>
     </html>
   );

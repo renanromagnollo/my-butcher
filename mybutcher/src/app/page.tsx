@@ -2,6 +2,7 @@
 
 import { Filters } from "@/components/filters"
 import { Item } from "@/components/item"
+import { ProductsList } from "@/components/products-list"
 import { DefaultPageLayout } from "@/styles/default-page-layout"
 import { styled } from "styled-components"
 
@@ -19,7 +20,8 @@ export default function Home() {
   return (
     // <DefaultPageLayout>
       <TagMain>
-        <Item/>
+        {/* <Item/> */}
+        <ProductsList/>
       </TagMain>
 
     // </DefaultPageLayout>
